@@ -1,5 +1,6 @@
 # PeppyMeter-4-Linux-desktop
 PeppyMeter VU-Meter for Linux desktop users listening music
+![Screenshot1](https://github.com/spagoc/PeppyMeter-4-Linux-desktop/assets/1367579/bdacbabb-ee81-4f31-989d-5a7a43f034db)
 
 As a Linux user I would always like to have a beautiful VU-meter on the desktop while I listen to music.
 This repo contains my effort to tie PeppyMeter VU-Meter to the modern PipeWire sound server. I used Ubuntu Desktop 2023.10.
@@ -35,3 +36,6 @@ Enjoy!
 * https://pipewire.org
 * https://docs.pipewire.org/audio-capture_8c-example.html, Copyright © 2022 Wim Taymans
 * https://gitlab.freedesktop.org/rncbc/qpwgraph
+
+  
+![qpwgraph](https://github.com/spagoc/PeppyMeter-4-Linux-desktop/assets/1367579/fad59bef-24b3-44ec-a5dd-9a1e48fcce73)
