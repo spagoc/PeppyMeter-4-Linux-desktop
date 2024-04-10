@@ -1,5 +1,6 @@
 # PeppyMeter-4-Linux-desktop
-PeppyMeter VU-Meter for Linux desktop users listening music
+PeppyMeter VU-Meter for Linux desktop users listening music.
+(This is a preliminary repo in order to evaluate a possible future PeppyMeter fork)
 ![Screenshot1](https://github.com/spagoc/PeppyMeter-4-Linux-desktop/assets/1367579/bdacbabb-ee81-4f31-989d-5a7a43f034db)
 
 As a Linux user I would always like to have a beautiful VU-meter on the desktop while I listen to music.
