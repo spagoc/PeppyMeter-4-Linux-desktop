@@ -24,7 +24,7 @@ PeppyMeter is written in Python so I tried to do all the work in Python but, at 
 * To stop the program just close the VU-meter window.
 
 ## EXTRA
-* You can run qpwgraph or helvum and connect the desired PipeWire node to the PeppyMeter node (see second screenshot). That's can be useful for example if you have more active apps producing sounds and you want to VU-meter only one of them.
+* You can run qpwgraph or helvum and connect the desired PipeWire node to the PeppyMeter node (see qpwgraph in the second screenshot). That's can be useful for example if you have more active apps producing sounds and you want to VU-meter only one of them.
 * If you like to have PeppyMeter connected to your mic input try to change "volume.max = 10.0" in your config.txt.
 * To see all the VU-meters present in PeppyMeter change "blue" in "random" in your config.txt.
 
