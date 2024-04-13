@@ -14,6 +14,7 @@ PeppyMeter is coded in Python, so initially, I attempted to accomplish everythin
     ### $ pip install pygame requests  
 * Compile peppymeter-start.c, that feeds PeppyMeter named pipe with a PipeWire stream:
     ### $ gcc -Wall pwstream4peppymet.c -o pwstream4peppymet $(pkg-config --cflags --libs libpipewire-0.3) -lm
+  To avoid compilation you can use binary for Ubuntu that is in "Release".
 
 ## RUN
 * Adapt, make executable and run the shell script: 
