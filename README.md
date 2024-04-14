@@ -1,10 +1,11 @@
 # PeppyMeter-4-Linux-desktop
 PeppyMeter VU-Meter for Linux desktop users listening to music
+
 ![Screenshot1](https://github.com/spagoc/PeppyMeter-4-Linux-desktop/assets/1367579/bdacbabb-ee81-4f31-989d-5a7a43f034db)
 
 As a Linux user, I always appreciate having a visually appealing VU-meter displayed on my desktop while I'm listening to music. This repository contains my endeavor to integrate the PeppyMeter VU-Meter with the modern PipeWire sound server. I conducted this project using Ubuntu Desktop 2023.10.
 
-PeppyMeter is coded in Python, so initially, I attempted to accomplish everything within Python. However, it seems that capturing the PipeWire stream in Python is currently not feasible (at least, based on my understanding from https://github.com/pablodz/pipewire_python/tree/main). Consequently, I opted to develop a C program instead."
+PeppyMeter is coded in Python, so initially, I attempted to accomplish everything within Python. However, it seems that capturing the PipeWire stream in Python is currently not feasible (at least, based on my understanding from https://github.com/pablodz/pipewire_python/tree/main). Consequently, I opted to develop a C program instead.
 
 ## INSTALL
 * Install and configure PeppyMeter:
@@ -14,7 +15,7 @@ PeppyMeter is coded in Python, so initially, I attempted to accomplish everythin
     ### $ pip install pygame requests  
 * Compile peppymeter-start.c, that feeds PeppyMeter named pipe with a PipeWire stream:
     ### $ gcc -Wall pwstream4peppymet.c -o pwstream4peppymet $(pkg-config --cflags --libs libpipewire-0.3) -lm
-  To avoid compilation you can use binary for Ubuntu that is in "Release".
+  To avoid this compilation you can use the binary file for Ubuntu that is in "Release".
 
 ## RUN
 * Adapt, make executable and run the shell script: 
