@@ -3,7 +3,7 @@ PeppyMeter VU-Meter for Linux desktop users listening to music
 
 ![Screenshot1](https://github.com/spagoc/PeppyMeter-4-Linux-desktop/assets/1367579/bdacbabb-ee81-4f31-989d-5a7a43f034db)
 
-As a Linux user, I always appreciate having a visually appealing VU-meter displayed on my desktop while I'm listening to music. This repository contains my endeavor to integrate the PeppyMeter VU-Meter with the modern PipeWire sound server. I conducted this project using Ubuntu Desktop 2023.10.
+As a Linux user, I always would appreciate having a visually appealing VU-meter displayed on my desktop while I'm listening to music. This repository contains my endeavor to integrate the PeppyMeter VU-Meter with the modern PipeWire sound server. 
 
 PeppyMeter is coded in Python, so initially, I attempted to accomplish everything within Python. However, it seems that capturing the PipeWire stream in Python is currently not feasible (at least, based on my understanding from https://github.com/pablodz/pipewire_python/tree/main). Consequently, I opted to develop a C program instead.
 
@@ -13,11 +13,10 @@ PeppyMeter is coded in Python, so initially, I attempted to accomplish everythin
   change PeppyMeter config.txt with the one that is in this repo.
 * Peppymeter needs python pygame library. Install it (or use a separated python virtual env):
     ### $ sudo apt install python-is-python3 python3-pygame  
-* Compile peppymeter-start.c, that feeds PeppyMeter named pipe with a PipeWire stream:
+* Download the binary file "pwstream4peppymet" that is in the "Releases" section, it feeds PeppyMeter named pipe with a PipeWire stream. Or compile peppymeter-start.c:
     ### $ gcc -Wall pwstream4peppymet.c -o pwstream4peppymet $(pkg-config --cflags --libs libpipewire-0.3) -lm
-  To avoid this compilation you can use the binary file pwstream4peppymet that is in "Release".
-* Put the binary file in ~/PeppyMeter-master, make it executable.
-  Put peppymeter-start.sh in ~/Desktop dir or where you prefer (if you used Python virtual env adapt the script shell). Make it executable.
+* Put the binary file "pwstream4peppymet" in the ~/PeppyMeter-master dir and make it executable.
+  Put peppymeter-start.sh in the ~/Desktop dir or where you prefer (if you used Python virtual env adapt the script shell). Make it executable.
 
 ## RUN
 * Right-click on peppymeter-start.sh and select "Run as a program" (see first screenshot).
