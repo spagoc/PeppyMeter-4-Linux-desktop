@@ -9,25 +9,27 @@ PeppyMeter is coded in Python, so initially, I attempted to accomplish everythin
 
 ## INSTALL
 * Install and configure PeppyMeter:
-  download and decompress source code master branch of PeppyMeter (repo in references below)
-  change PeppyMeter config.txt with the one that is in this repo
-* Peppymeter needs two python libraries, put them in your main env or or in a separated virtual env:
-    ### $ pip install pygame requests  
+  download and decompress source code master branch of PeppyMeter in your home dir (https://github.com/project-owner/PeppyMeter), 
+  change PeppyMeter config.txt with the one that is in this repo.
+* Peppymeter needs python pygame library. Install it (or use a separated python virtual env):
+    ### $ sudo apt install python-is-python3 python3-pygame  
 * Compile peppymeter-start.c, that feeds PeppyMeter named pipe with a PipeWire stream:
     ### $ gcc -Wall pwstream4peppymet.c -o pwstream4peppymet $(pkg-config --cflags --libs libpipewire-0.3) -lm
-  To avoid this compilation you can use the binary file for Ubuntu that is in "Release".
+  To avoid this compilation you can use the binary file pwstream4peppymet that is in "Release".
+* Put the binary file in ~/PeppyMeter-master, make it executable.
+  Put peppymeter-start.sh in ~/Desktop dir or where you prefer (if you used Python virtual env adapt the script shell). Make it executable.
 
 ## RUN
-* Adapt, make executable and run the shell script: 
-    ### peppymeter-start.sh. 
-* You can also put it on the Ubuntu desktop and run it with a right-click and select "Run as a program" (see first screenshot).
+* Right-click on peppymeter-start.sh and select "Run as a program" (see first screenshot).
 * To stop the program just close the VU-meter window.
 
 ## EXTRA
 * You can run qpwgraph or helvum and connect the desired PipeWire node to the PeppyMeter node (see qpwgraph in the second screenshot). That's can be useful for example if you have more active apps producing sounds and you want to VU-meter only one of them etc.
 * Instead if you would like to have PeppyMeter connected to your mic input try to change "volume.max = 10.0" in your config.txt.
-* To see all the VU-meters present in PeppyMeter change "blue" in "random" in your config.txt.
+* To see all the VU-meters present in PeppyMeter change "blue" in "random" in your config.txt (I prefer the blu one because it reminds me the Mackintosh hi-end amps).
 
+## DISTROS
+Tested on Ubuntu 23.10, Ubuntu 24.04 LTS, Fedora 40.
 Enjoy!
 
 ## References and thanks:
