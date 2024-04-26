@@ -7,13 +7,13 @@ if [ ! -p $PIPE_NAME ]; then
     mkfifo $PIPE_NAME
 fi  
 
-# Activate python virtual env named pygame
-alias activate=". ../pyenvs/pygame/bin/activate"
-cd
-cd PeppyMeter-master/
-activate	
+# If you use python virtual env (eg. named pygame) activate it
+#alias activate=". ../pyenvs/pygame/bin/activate"
+#cd
+#cd PeppyMeter-master/
+#activate	
 
 # Run peppymeter in the virtual env
+cd ~/PeppyMeter-master
 python peppymeter.py &
-cd 
-./pi/pwstream4peppymet
+./pwstream4peppymet
