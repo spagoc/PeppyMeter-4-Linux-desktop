@@ -3,20 +3,21 @@ PeppyMeter VU-Meter for Linux desktop users listening to music
 
 ![Screenshot1](https://github.com/spagoc/PeppyMeter-4-Linux-desktop/assets/1367579/bdacbabb-ee81-4f31-989d-5a7a43f034db)
 
-As a Linux user, I always would appreciate having a visually appealing VU-meter displayed on my desktop while I'm listening to music. This repository contains my endeavor to integrate the PeppyMeter VU-Meter with the modern PipeWire sound server. 
+As a Linux user, I would always appreciate having a visually appealing VU-meter displayed on my desktop while I'm listening to music. This repository contains my endeavor to integrate the PeppyMeter VU-Meter with the modern PipeWire sound server. 
 
-PeppyMeter is coded in Python, so initially, I attempted to accomplish everything within Python. However, it seems that capturing the PipeWire stream in Python is currently not feasible (at least, based on my understanding from https://github.com/pablodz/pipewire_python/tree/main). Consequently, I opted to develop a C program instead.
+PeppyMeter is coded in Python, so initially, I attempted to accomplish everything within Python. However, it seems that capturing the PipeWire stream in Python is currently not feasible (at least, based on my understanding of https://github.com/pablodz/pipewire_python/tree/main). Consequently, I opted to develop a C program instead.
 
 ## INSTALL
-* Install and configure PeppyMeter:
-  download and decompress source code master branch of PeppyMeter in your home dir (https://github.com/project-owner/PeppyMeter), 
-  change PeppyMeter config.txt with the one that is in this repo.
-* Peppymeter needs python pygame library. Install it (or use a separated python virtual env):
-    ### $ sudo apt install python-is-python3 python3-pygame  
-* Download the binary file "pwstream4peppymet" that is in the "Releases" section, it feeds PeppyMeter named pipe with a PipeWire stream. Or compile peppymeter-start.c:
-    ### $ gcc -Wall pwstream4peppymet.c -o pwstream4peppymet $(pkg-config --cflags --libs libpipewire-0.3) -lm
+* Install and configure PeppyMeter (https://github.com/project-owner/PeppyMeter):
+  download and decompress source code master branch of PeppyMeter in your home dir.
+* Change PeppyMeter config.txt with the one that is in this repo.
+* Peppymeter needs python pygame library. Install it directly (or use a separated Python virtual env):  
+     $ sudo apt install python-is-python3 python3-pygame (in Ubuntu)  
+     $ pip install pygame  (in Fedora)
+* Download the binary file "pwstream4peppymet" that is in the "Releases" section, it feeds PeppyMeter named pipe with a PipeWire stream. Or compile peppymeter-start.c:  
+     $ gcc -Wall pwstream4peppymet.c -o pwstream4peppymet $(pkg-config --cflags --libs libpipewire-0.3) -lm
 * Put the binary file "pwstream4peppymet" in the ~/PeppyMeter-master dir and make it executable.
-  Put peppymeter-start.sh in the ~/Desktop dir or where you prefer (if you used Python virtual env adapt the script shell). Make it executable.
+* Put peppymeter-start.sh in the ~/Desktop dir or where you prefer (if you used Python virtual env adapt the script shell). Make it executable.
 
 ## RUN
 * Right-click on peppymeter-start.sh and select "Run as a program" (see first screenshot).
@@ -28,8 +29,7 @@ PeppyMeter is coded in Python, so initially, I attempted to accomplish everythin
 * To see all the VU-meters present in PeppyMeter change "blue" in "random" in your config.txt (I prefer the blu one because it reminds me the Mackintosh hi-end amps).
 
 ## DISTROS
-Tested on Ubuntu 23.10, Ubuntu 24.04 LTS, Fedora 40.
-Enjoy!
+Tested on Ubuntu 23.10, Ubuntu 24.04 LTS, Fedora 40.  
 
 ## References and thanks:
 * https://github.com/project-owner/PeppyMeter
