@@ -15,10 +15,12 @@ PeppyMeter is coded in Python, so initially, I attempted to accomplish everythin
      $ sudo apt install python-is-python3 python3-pygame (Ubuntu)   
      or:  
      $ pip install pygame  (Fedora)
-5. Download the binary file "pwstream4peppymet" that is in the "Releases" section, it feeds PeppyMeter named pipe with a PipeWire stream. Or compile peppymeter-start.c:  
+4. Download the binary file "pwstream4peppymet" that is in the "Releases" section, it feeds PeppyMeter named pipe with a PipeWire stream.     
+   Or compile peppymeter-start.c:    
+     $ sudo apt install libpipewire-0.3-dev       
      $ gcc -Wall pwstream4peppymet.c -o pwstream4peppymet $(pkg-config --cflags --libs libpipewire-0.3) -lm
-6. Put the binary file "pwstream4peppymet" in the ~/PeppyMeter-master dir and make it executable.
-7. Put peppymeter-start.sh in the ~/Desktop dir or where you prefer (if you used Python virtual env adapt the script shell). Make it executable.
+5. Put the binary file "pwstream4peppymet" in the ~/PeppyMeter-master dir and make it executable.
+6. Put peppymeter-start.sh in the ~/Desktop dir or where you prefer (if you used Python virtual env adapt the script shell). Make it executable.
 
 ## RUN
 * Right-click on peppymeter-start.sh and select "Run as a program" (see first screenshot).
