@@ -12,22 +12,33 @@ PeppyMeter is coded in Python, so initially, I attempted to accomplish everythin
    download and decompress source code master branch of PeppyMeter in your home dir.
 2. Change PeppyMeter config.txt with the one that is in this repo.
 3. Peppymeter needs python pygame library. Install it directly (or use a separated Python virtual env):  
-     $ sudo apt install python-is-python3 python3-pygame (Ubuntu)   
-     or:  
-     $ pip install pygame  (Fedora)
+   ####  (Ubuntu)
+   ```bash
+     $ sudo apt install python-is-python3 python3-pygame 
+   ```        
+   ####  (Fedora)     
+   ```bash
+     $ pip install pygame  
+   ```
 4. Download the binary file "pwstream4peppymet" that is in the "Releases" section, it feeds PeppyMeter named pipe with a PipeWire stream.     
-   Or compile peppymeter-start.c:    
-     $ sudo apt install libpipewire-0.3-dev       
+   Or compile pwstream4peppymet.c:
+     ####  (Ubuntu)
+     ```bash  
+     $ sudo apt install libpipewire-0.3-dev
+     ```
+
+     ```bash     
      $ gcc -Wall pwstream4peppymet.c -o pwstream4peppymet $(pkg-config --cflags --libs libpipewire-0.3) -lm
-5. Put the binary file "pwstream4peppymet" in the ~/PeppyMeter-master dir and make it executable.
-6. Put peppymeter-start.sh in the ~/Desktop dir or where you prefer (if you used Python virtual env adapt the script shell). Make it executable.
+     ```
+6. Put the binary file "pwstream4peppymet" in the ~/PeppyMeter-master dir and make it executable.
+7. Put peppymeter-start.sh in the ~/Desktop dir or where you prefer (if you used Python virtual env adapt the script shell). Make it executable.
 
 ## RUN
 * Right-click on peppymeter-start.sh and select "Run as a program" (see first screenshot).
 * To stop the program just close the VU-meter window.
 
 ## EXTRA
-* You can run qpwgraph or helvum and connect the desired PipeWire node to the PeppyMeter node (see qpwgraph in the second screenshot). That's can be useful for example if you have more active apps producing sounds and you want to VU-meter only one of them etc.
+* You can run qpwgraph or helvum and connect the desired PipeWire node to the PeppyMeter node in the audio graph (see qpwgraph in the second screenshot). That's can be useful for example if you have more active apps producing sounds and you want to VU-meter only one of them etc.
 * Instead if you would like to have PeppyMeter connected to your mic input try to change "volume.max = 10.0" in your config.txt.
 * To see all the VU-meters present in PeppyMeter change "blue" in "random" in your config.txt (I prefer the blu one because it reminds me the McIntosh hi-end amps).
 
