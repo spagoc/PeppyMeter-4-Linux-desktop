@@ -8,27 +8,27 @@ As a Linux user, I would always appreciate having a visually appealing VU-meter 
 PeppyMeter is coded in Python, so initially, I attempted to accomplish everything within Python. However, it seems that capturing the PipeWire stream in Python is currently not feasible (at least, based on my understanding of https://github.com/pablodz/pipewire_python/tree/main). Consequently, I opted to develop a C program instead.
 
 ## INSTALL
-1. Install and configure PeppyMeter (https://github.com/project-owner/PeppyMeter):
+1. Install PeppyMeter (https://github.com/project-owner/PeppyMeter):
    download and decompress source code master branch of PeppyMeter in your home dir.
 2. Change PeppyMeter config.txt with the one that is in this repo.
 3. Peppymeter needs python pygame library. Install it directly (or use a separated Python virtual env):  
    ####  (Ubuntu)
    ```bash
-     $ sudo apt install python-is-python3 python3-pygame 
+     sudo apt install python-is-python3 python3-pygame 
    ```        
    ####  (Fedora)     
    ```bash
-     $ pip install pygame  
+     pip install pygame  
    ```
 4. Download the binary file "pwstream4peppymet" that is in the "Releases" section, it feeds PeppyMeter named pipe with a PipeWire stream.     
    Or compile pwstream4peppymet.c:
      ####  (Ubuntu)
      ```bash  
-     $ sudo apt install libpipewire-0.3-dev
+     sudo apt install libpipewire-0.3-dev
      ```
 
      ```bash     
-     $ gcc -Wall pwstream4peppymet.c -o pwstream4peppymet $(pkg-config --cflags --libs libpipewire-0.3) -lm
+     gcc -Wall pwstream4peppymet.c -o pwstream4peppymet $(pkg-config --cflags --libs libpipewire-0.3) -lm
      ```
 6. Put the binary file "pwstream4peppymet" in the ~/PeppyMeter-master dir and make it executable.
 7. Put peppymeter-start.sh in the ~/Desktop dir or where you prefer (if you used Python virtual env adapt the script shell). Make it executable.
