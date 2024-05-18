@@ -9,7 +9,7 @@ PeppyMeter is coded in Python, so initially, I attempted to accomplish everythin
 
 ## INSTALL
 1. Install PeppyMeter (https://github.com/project-owner/PeppyMeter):
-   download and decompress source code master branch of PeppyMeter in your home dir.
+   download the .zip and decompress it in your home dir.
 2. Change PeppyMeter config.txt with the one that is in this repo.
 3. Peppymeter needs python pygame library. Install it directly (or use a separated Python virtual env):  
    ####  (Ubuntu)
